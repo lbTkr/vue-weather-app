@@ -1,6 +1,7 @@
 <script setup>
     import TitleComp from './components/Title.vue';
     import PortfolioComp from './components/Portfolio.vue';
+    import AboutComp from './components/About.vue';
 </script>
 
 <template>
@@ -25,6 +26,7 @@
 
 <TitleComp />
 <PortfolioComp />
+<AboutComp />
 
 </template>
 
