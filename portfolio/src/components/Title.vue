@@ -1,5 +1,5 @@
 <script setup>
-
+    const title = "Hello,<br>I'm Heejoo Kang";
 </script>
 
 <template>
@@ -10,7 +10,7 @@
                     <img src="./../assets/images/title.png" alt="title">
                 </figure>
                 <div class="text col-md-6">
-                    <h2>Hello,<br>I'm Heejoo</h2>
+                    <h2 v-html="title"></h2>
                 </div>
             </div>
         </div>
