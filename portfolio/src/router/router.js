@@ -1,11 +1,13 @@
 import {createWebHistory, createRouter} from 'vue-router';
-import Title from '../components/Title.vue';
+import TitleComp from '../components/Title.vue';
 
-createRouter({
+const router = createRouter({
     history: createWebHistory(),
     routes: [
-        {path: '/', component: Title},
+        {path: '/', component: TitleComp},
         // {path: '/portfolio', component: Portfolio},
         // {path: '/about', component: About}
     ],
 });
+
+export default router;
