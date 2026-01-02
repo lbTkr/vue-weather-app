@@ -3,7 +3,7 @@
         <div class="container">
             <div class="detail row">
                 <figure class="col-md-6">
-                    <img src="./../assets/images/title.png" alt="title">
+                    <img src="../assets/images/title.png" alt="title">
                 </figure>
                 <div class="text col-md-6">
                     <h2 v-html="title"></h2>
