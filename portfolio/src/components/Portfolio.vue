@@ -2,18 +2,24 @@
     <div id="portfolio" class="container">
         <h1>Portfolio</h1>
         <ul class="list row">
-            <li class="col-md-4" v-for="item in data" :key="item.id">
+            <li class="col-md-4" v-for="item in props.data" :key="item.id">
                 <img :src="item.imgUrl" :alt="item.title">
                 <h2>{{ item.title }}</h2>
                 <p>{{ item.desc }}</p>
+                <small class="mb-3 text-secondary">{{ item.skills }}</small>
+                <router-link
+                   class="btn btn-primary" :to="'/detail/' + item.id">상세보기
+                </router-link>
             </li>
         </ul>
     </div>
 </template>
 
 <script setup>
-    import data from './../assets/portfolio';
-    console.log(data);
+    const props = defineProps({
+        data: Array,
+    });
+    console.log(props.data);
 </script>
 
 <style lang="scss" scoped>
