@@ -1,4 +1,5 @@
-import {createWebHistory, createRouter} from 'vue-router';
+// import {createWebHistory, createRouter} from 'vue-router';
+import {createRouter, createWebHistory} from 'vue-router';
 import TitleComp from '../components/Title.vue';
 import About from '../components/About.vue';
 import Portfolio from '../components/Portfolio.vue';
