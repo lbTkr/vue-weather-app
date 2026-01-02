@@ -1,6 +1,6 @@
 <script setup>
     import Navbar from './components/Navbar.vue';
-    import SearchBar from './assets/SearchBar.vue';
+    import SearchBar from './components/SearchBar.vue';
 </script>
 
 <template>
