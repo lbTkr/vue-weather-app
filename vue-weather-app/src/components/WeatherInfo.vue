@@ -17,7 +17,7 @@
     const props = defineProps({
         weatherData: Object,
     });
-    console.log("props === ", props.weatherData);
+    
 </script>
 
 <style lang="scss" scoped>

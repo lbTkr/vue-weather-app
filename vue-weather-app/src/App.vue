@@ -43,6 +43,7 @@
 </script>
 
 <template>
+    <p>count: {{ $store.state.count }}</p>
     <Navbar />
     <MainComp
         :weatherData="weatherData"
