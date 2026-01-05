@@ -15,6 +15,7 @@ export default createStore({
             location: 'location',
             city: 'Seoul',
         },
+        toggle: false, // false일 때, about을 보여줌
     },
     mutations: {
         // mutations: state 변경 메서드
@@ -33,18 +34,24 @@ export default createStore({
         },
         onSearchCity(state, payload){
             state.weatherData.city = payload;
+        },
+        // about 컴포넌트 토글
+        toggleButton(state){
+            state.toggle = !state.toggle;
         }
     },
     actions: {
         // 비동기 작업을 처리할 때 사용
-        //날씨 데이터 가져오기
+        // 날씨 데이터 가져오기
         getWeather(context){ // context: store 객체와 비슷한 전역 객체
             /*
              * ${weatherData.value.city} -> ${context.state.weatherData.city}
              * context 객체를 통해 state에 접근하면
              * weatherData.value 대신 context.state.weatherData로 접근 가능
              */
-            const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${context.state.weatherData.city}&appid=ae3f29288113ff51369cab95b18763e1`;
+            const API_KEY = import.meta.env.VITE_API_KEY;
+            const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${context.state.weatherData.city}&appid=${API_KEY}`;
+
             fetch(API_URL)
                 .then(res => res.json())
                 .then(data => {
