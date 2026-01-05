@@ -1,15 +1,14 @@
 <template>
     <div class="weather-info">
         <div class="icon">
-            <img :src="`https://openweathermap.org/img/wn/${props.weatherData.icon}@2x.png`" :alt="`props.weatherData.icon == ${props.weatherData.text}`" />
+            <img :src="`https://openweathermap.org/img/wn/${$store.state.weatherData.icon}@2x.png`" :alt="`props.weatherData.icon == ${props.weatherData.text}`" />
         </div>
         <div class="temp">
-            {{ ((props.weatherData.temp - 273.15)).toFixed(0) }}&deg;
+            {{ $store.state.weatherData.temp }}&deg;
 
         </div>
-        <div class="text">{{ props.weatherData.text }}</div>
-        <div class="location">
-            {{ props.weatherData.city }}, {{ props.weatherData.location }}</div>
+        <div class="text">{{ $store.state.weatherData.text }}</div>
+        <div class="location">{{ $store.state.weatherData.location }}</div>
     </div>
 </template>
 
