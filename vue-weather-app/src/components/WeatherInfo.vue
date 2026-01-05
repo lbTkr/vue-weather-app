@@ -4,7 +4,7 @@
             <img :src="`https://openweathermap.org/img/wn/${props.weatherData.icon}@2x.png`" :alt="`props.weatherData.icon == ${props.weatherData.text}`" />
         </div>
         <div class="temp">
-            {{ ((props.weatherData.temp - 273.15) * 9/5 + 32).toFixed(0) }}°F
+            {{ ((props.weatherData.temp - 273.15)).toFixed(0) }}&deg;
 
         </div>
         <div class="text">{{ props.weatherData.text }}</div>
