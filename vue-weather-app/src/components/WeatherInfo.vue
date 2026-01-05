@@ -3,10 +3,7 @@
         <div class="icon">
             <img :src="`https://openweathermap.org/img/wn/${$store.state.weatherData.icon}@2x.png`" :alt="`props.weatherData.icon == ${props.weatherData.text}`" />
         </div>
-        <div class="temp">
-            {{ $store.state.weatherData.temp }}&deg;
-
-        </div>
+        <div class="temp">{{ $store.state.weatherData.temp }}&deg;</div>
         <div class="text">{{ $store.state.weatherData.text }}</div>
         <div class="location">{{ $store.state.weatherData.location }}</div>
     </div>
