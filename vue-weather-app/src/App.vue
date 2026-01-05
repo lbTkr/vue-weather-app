@@ -13,13 +13,13 @@
     });
 
     const onSearchCity = (city) => {
-        $store.
-        getWeather();
+        store.commit('onSearchCity', city);
+        store.dispatch('getWeather');
     };
 </script>
 
 <template>
-    <button @click="$store.dispatch('getWeather')">Get Weather</button>
+    <button @click="store.dispatch('getWeather')">Get Weather</button>
     <Navbar />
     <MainComp />
 </template>
