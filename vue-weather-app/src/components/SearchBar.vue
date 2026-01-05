@@ -6,7 +6,12 @@
                     @input="inputText = $event.target.value;"
                     type="search"
                     placeholder="지역을 입력해 주세요">
-                <button @click="emits('onSearchCity', inputText)">
+                <button
+                    @click="
+                        $store.commit('onSearchCity', inputText);
+                        $store.dispatch('getWeather');
+                    "
+                >
                     <font-awesome-icon class="icon" icon="fa-solid fa-magnifying-glass" />
                 </button>
             </div>
