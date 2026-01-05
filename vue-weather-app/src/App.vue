@@ -28,12 +28,18 @@
                 weatherData.value.location = data.sys.country;
                 weatherData.value.city = data.name;
             });
-    })
+    });
+    const onSearchCity = (city) => {
+        console.log('App.vue', city);
+        weatherData.value.city = city;
+    };
 </script>
 
 <template>
     <Navbar />
-    <MainComp :weatherData/>
+    <MainComp
+        :weatherData="weatherData"
+        @onSearchCity="onSearchCity"/>
 </template>
 
 <style lang="scss" scoped>
