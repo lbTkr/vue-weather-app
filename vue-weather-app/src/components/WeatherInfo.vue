@@ -8,7 +8,8 @@
 
         </div>
         <div class="text">{{ props.weatherData.text }}</div>
-        <div class="location">{{ props.weatherData.location }}</div>
+        <div class="location">
+            {{ props.weatherData.city }}, {{ props.weatherData.location }}</div>
     </div>
 </template>
 
